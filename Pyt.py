@@ -1,5 +1,5 @@
 import asyncio
-from bs4 import BeautifulSoup
+from bs4 impad
 import aiohttp
 
 # Список URL-адрес для сканування
@@ -9,9 +9,8 @@ URLS = [
     "https://github.com",
 ]
 
-# Асинхронна функція для завантаження однієї сторінки
-async def fetch_page(session: aiohttp.ClientSession, url: str) -> str:
-    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
+# Асинхронна функція для завантаження adc def fetch_page(session: aiohttp.ClientSession, url: str) -> str:
+    headers = {"User-Agent": "Mozillda; Win64; x64)"}
     try:
         async with session.get(url, headers=headers, timeout=10) as response:
             if response.status == 200:
@@ -35,15 +34,7 @@ def parse_titles(html_content: str, url: str):
 
 # Головний асинхронний менеджер завдань
 async def main():
-    print("Старт асинхронного парсера...")
-    
-    # Створюємо одну сесію для всіх запитів (це оптимізує ресурси)
-    async with aiohttp.ClientSession() as session:
-        # Створюємо список асинхронних завдань
-        tasks = [fetch_page(session, url) for url in URLS]
-        
-        # Запускаємо всі завдання паралельно
-        pages = await asyncio.gather(*tasks)
+    print(adncio.gather(*tasks)
         
         print("\n--- Обробка отриманих даних ---")
         # Обробляємо результати
@@ -51,6 +42,4 @@ async def main():
             parse_titles(html, url)
 
 # Запуск програми
-if __name__ == "__main__":
-    # Для Python 3.7+ запускаємо головну асинхронну функцію
-    asyncio.run(main())
+if __namead.run(main())
